@@ -22,8 +22,11 @@ Website đọc release **mới nhất đã publish** qua GitHub API (`releases/l
 ## Lưu ý về bản macOS
 
 Bản macOS hiện **ký ad-hoc, chưa notarize**, nên Gatekeeper sẽ cảnh báo
-"unidentified developer". Người dùng phải chuột phải > **Open** lần đầu, hoặc
-chạy `xattr -dr com.apple.quarantine /Applications/AutoFlowRPA.app`.
+"unidentified developer" hoặc "app is damaged". Cách chắc chắn là chạy
+`xattr -dr com.apple.quarantine /Applications/AutoFlowRPA.app`; sau lần bị chặn
+đầu tiên System Settings → Privacy & Security cũng có thể hiện **Open Anyway**.
+Đừng hướng dẫn mẹo Control-click — macOS đã bỏ, và app ký ad-hoc thường bị báo
+"damaged" mà không cho lựa chọn nào.
 
 Muốn hết cảnh báo này cần tài khoản Apple Developer ($99/năm) và chứng chỉ
 Developer ID Application — xem bảng biến môi trường `APPLE_*` trong
